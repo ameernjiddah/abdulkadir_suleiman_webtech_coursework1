@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cyphers by suleiman</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+  <h1>Cryptography</h1>
+<div class="main-container">
+  <div class="dv-algo">Select Algorithm:
+  <select id="slct-cypher-algo">
+    <option value="caesar">Caesar</option>
+    <option value="substitution">Simple Substitution</option>
+  </select>
+  </div>
+
+  <div class="dv-encrypt">
+    <table border="0" class="cipher">
+      <tr>
+        <td><textarea name="message_to_cypher" id="input-to-cypher" placeholder="Enter message to Cypher"></textarea></td>
+        <td><input type="button" value="&uarr; Cypher &uarr;" onclick="cypherMessage()"></td>
+        <td><textarea name="txt_cyphered" id="txt-cyphered" placeholder="Cyphered Message will be displayed here." readonly="readonly"></textarea></td>
+      </tr>
+    </table>
+
+
+  </div>
+
+  <div class="dv-decrypt">
+    <table border="0" class="cipher">
+      <tr>
+  <td><textarea name="message_to_decypher" id="input-to-decypher" placeholder="Enter message to deCypher"></textarea></td>
+  <td><input type="button" name="" value="&darr; Decipher &darr;" onclick="decipherMessage()"></td>
+  <td><textarea name="txt_deciphered" id="txt-deciphered" placeholder="Deciphered Message will be displayed here." readonly="readonly"></textarea></td>
+  </tr>
+  </table>
+  </div>
+  <div class="dv-tip" id="dv-tip-caesar">
+    <strong>Caesar Cipher: </strong> In this method each letter is shifted a certain number of places
+    down the alphabets. The shift number is defined and required to decipher the message. <br>
+    In our case we are using 'Shift value' 5.<br>
+    So, as an example 'a' becomes 'f', 'b' becomes 'g' and so on...
+  </div>
+
+  <div class="dv-tip" id="dv-tip-substitution">
+    <strong>Simple Substitution Cipher: </strong> In this method each letter is substituted with a different letter.<br>
+    This method is different from Caesar method that each ciphered alphabet is not just an alphabet shifted by
+    fixed number. It's randomly set by a key.<br>
+    The key we are using is 'thwobadirfkmqyclezxvsgpujn'.<br>
+    So, 'a' becomes 't', 'b' becomes 'h' and so on...
+
+  </div>
+</div>
+
+
+
+</body>
+</html>
